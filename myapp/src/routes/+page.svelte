@@ -17,7 +17,7 @@
 		// gemini says onMount is used to wait for the page to load before starting GSAP
 		// becuz gsap needs to find book element in HTML
 		const lenis = new Lenis();
-		lenis.on('scroll', ScrollTrigger.update)
+		lenis.on('scroll', ScrollTrigger.update);
 		function raf(time: number) {
 			lenis.raf(time);
 			requestAnimationFrame(raf);
@@ -54,20 +54,22 @@
 </script>
 
 <!-- using just screen makes the site janky idk -->
-<div class="min-h-screen w-full bg-[#FFCC90]">
+<div class="min-h-screen w-full overflow-hidden bg-[#FFCC90]">
 	<!-- #FFCC90 is a good color -->
 	<div
 		style="background-image: url({wallpaper})"
 		class="inset-0 flex h-screen w-screen flex-col items-center justify-center bg-cover bg-center font-[Belanosima]"
 	>
-		<div class="fixed right-0 my-auto pr-4 text-center text-lg text-red-500 lg:pr-8 lg:text-2xl z-10">
+		<div
+			class="fixed right-0 z-10 my-auto pr-4 text-center text-lg text-red-500 lg:pr-8 lg:text-2xl"
+		>
 			<p id="hello-text">hello</p>
 			<p id="what-text" class="text-orange-400">what?</p>
-			<p class="text-orange-400">FAQ</p>
-			<p class="text-orange-400">guides</p>
+			<p id="faq-text" class="text-orange-400">FAQ</p>
+			<p id="bye-text" class="text-orange-400">bye</p>
 		</div>
-		<img src={title_lg} alt="Ramen Hack title" class="my-4 max-h-[30vh] w-auto hidden md:block" />
-		<img src={title} alt="Ramen Hack title" class="my-4 max-h-[30vh] w-auto block md:hidden" />
+		<img src={title_lg} alt="Ramen Hack title" class="my-4 hidden max-h-[30vh] w-auto md:block" />
+		<img src={title} alt="Ramen Hack title" class="my-4 block max-h-[30vh] w-auto md:hidden" />
 		<div class="flex flex-col items-center justify-center gap-3 lg:flex-row">
 			<p class="text-lg text-red-500">use cool scrolling effects</p>
 			<button
@@ -91,21 +93,25 @@
 	>
 
 	<!-- <img src={ramenbowl} alt="Picture of ramen bowl" class="hidden lg:block fixed -left-80 -bottom-110 scale-75 rotate-75"> -->
-	<div id="what" class="sm:px-4 flex h-screen w-screen flex-col items-center justify-center bg-[#FFCC90]">
-		<p class="bold py-8 font-[Belanosima] text-4xl text-red-500">How does this work?</p>
-		<p class="bold py-8 font-[Belanosima] text-2xl">More stuff to come later :D</p>
+	<div
+		id="what"
+		class="flex min-h-screen w-screen gap-20 flex-col items-center justify-center bg-[#FFCC90] sm:px-4 md:flex-row"
+	>
+		<div class="flex flex-col items-center justify-center">
+			<p class="bold py-8 font-[Belanosima] text-4xl text-red-500">How does this work?</p>
+			<p class="bold py-8 font-[Belanosima] text-2xl">More stuff to come later :D</p>
+		</div>
 		<img id="bowl" src={ramenbowl} alt="Tonkotsu ramen" class="h-100 w-auto rotate-75" />
 	</div>
 
 	<!-- footer area -->
 	<div
-		class="bg-[#692616] inset-0 py-8 flex min-h-1/2 h-auto w-screen flex-col items-center justify-center bg-cover bg-center font-[Belanosima]"
+		id="footer"
+		class="mt-8 inset-0 flex h-auto min-h-[30vh] w-screen flex-col items-center justify-center bg-[#692616] bg-cover bg-center py-8 font-[Belanosima]"
 	>
-
 		<div class="flex flex-col items-center justify-center gap-3">
-			<p class="text-lg text-red-500">Made with luv!</p>
+			<p class="text-lg text-[#FBE4AB]">Made with luv!</p>
 			<p class="text-lg text-red-500">by Hack Club</p>
 		</div>
-
 	</div>
 </div>
