@@ -85,10 +85,10 @@
 		<div
 			class="fixed right-0 z-20 my-auto pr-4 text-center text-lg text-red-600 lg:pr-8 lg:text-2xl"
 		>
-			<p class="italic">Scroll:</p>
+			<!-- <p class="italic">Scroll:</p> -->
 			<p id="hello-text">HELLO</p>
 			<p id="what-text" class="text-orange-400">WHAT?</p>
-			<p id="resources-text" class="text-orange-400">RESOURCES</p>
+			<!-- <p id="resources-text" class="text-orange-400">RESOURCES</p> -->
 			<!-- <p id="bye-text" class="text-orange-400">BYE</p> -->
 		</div>
 		<img
@@ -147,15 +147,17 @@
 				<p class="italic">(Shipping means that other people can see your website/play your game online!)</p>
 			</div>
 
-			<p class="font-[Belanosima] text-4xl text-red-600">2 hours</p>
+			<p class="font-[Belanosima] text-4xl text-red-600 pt-4">2 hours</p>
 			<div class="pb-4 font-[Belanosima] text-xl">
 				<p class="py-4">If you code for 2 hours, we'll ship you instant ramen noodles.</p>
 			</div>
 
 			<p class="font-[Belanosima] text-4xl text-red-600">5+ hours with friends</p>
-			<div class="pb-4 font-[Belanosima] text-xl">
+			<div class="font-[Belanosima] text-xl">
 				<p class="py-4">If you and a friend each spend 5 hours on your projects, we'll give each of you a $25 HCB grant to eat at a restaurant together. Just include your friend's Slack ID when submitting!</p>
 			</div>
+
+			<p class="font-[Belanosima] text-4xl text-red-600 py-4">ENDS JUNE 18</p>
 			
 		</div>
 		
