@@ -45,7 +45,7 @@
 			end: 'bottom center',
 			toggleClass: {
 				targets: '#what-text',
-				className: '!text-red-500'
+				className: '!text-red-600'
 			}
 		}),
 			ScrollTrigger.create({
@@ -76,14 +76,14 @@
 </script>
 
 <!-- using just screen makes the site janky idk -->
-<div class="min-h-screen w-full overflow-hidden bg-[#FFCC90]">
+<div class="min-h-screen w-full overflow-hidden bg-[#FFCC90] text-center">
 	<!-- #FFCC90 is a good color -->
 	<div
 		style="background-image: url({wallpaper})"
 		class="inset-0 flex h-screen w-screen flex-col items-center justify-center bg-cover bg-center font-[Belanosima]"
 	>
 		<div
-			class="fixed right-0 z-20 my-auto pr-4 text-center text-lg text-red-500 lg:pr-8 lg:text-2xl"
+			class="fixed right-0 z-20 my-auto pr-4 text-center text-lg text-red-600 lg:pr-8 lg:text-2xl"
 		>
 			<p class="italic">Scroll:</p>
 			<p id="hello-text">HELLO</p>
@@ -102,12 +102,12 @@
 			class="scroll-title my-4 block max-h-[30vh] w-auto md:hidden -mt-20 md:mt-0"
 		/>
 		<div class="flex flex-col items-center justify-center gap-3 lg:flex-row z-10 -mt-10 md:mt-0">
-			<p class="text-lg text-red-500">make a scroll-based website or game</p>
+			<p class="text-lg text-red-600">make a scroll-based website or game</p>
 			<button
-				class="rounded-full border-2 border-red-500 px-4 py-2 text-lg text-red-500 hover:bg-red-500 hover:text-white"
+				class="rounded-full border-2 border-red-600 px-4 py-2 text-lg text-red-600 hover:bg-red-600 hover:text-white"
 				>• SUBMIT HERE •</button
 			>
-			<p class="text-lg text-red-500">we'll ship you + your friends noodles!!</p>
+			<p class="text-lg text-red-600">we'll ship you + your friends noodles!!</p>
 		</div>
 
 		<!-- <div id="book">
@@ -126,40 +126,51 @@
 	<!-- <img src={ramenbowl} alt="Picture of ramen bowl" class="hidden lg:block fixed -left-80 -bottom-110 scale-75 rotate-75"> -->
 	<div
 		id="what"
-		class="flex min-h-screen w-screen flex-col items-center justify-center gap-20 bg-[#FFCC90] sm:px-4 md:flex-row"
+		class="pb-8 flex min-h-screen w-screen flex-col items-center justify-center gap-20 bg-[#FFCC90] sm:px-4 md:flex-row"
 	>
-		<div class="flex flex-col items-center justify-center bg-[#FBE4AB] h-auto w-3/4 md:w-1/2 px-12 rounded-lg">
-			<p class="pt-8 font-[Belanosima] text-4xl text-red-500">How does this work?</p>
+		<div class="flex flex-col items-center justify-center bg-[#FBE4AB] h-auto w-3/4 md:w-1/2 px-12 lg:px-20 py-4 rounded-lg">
+			<p class="pt-8 font-[Belanosima] text-4xl text-red-600">How does this work?</p>
 			<div class="pb-4 font-[Belanosima] text-xl">
 				<ol class="py-4 list-decimal list-inside">
-					<li>Connect to <a class="text-red-500 no-underline hover:underline hover:decoration-dashed decoration-red-500 decoration-2" href="https://hackatime.hackclub.com/">Hackatime</a></li>
-					<li>Make a <a class="text-red-500 no-underline hover:underline hover:decoration-dashed decoration-red-500 decoration-2" href="https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories">GitHub repository</a></li>
+					<li>Connect to <a class="text-red-600 no-underline hover:underline hover:decoration-dashed decoration-red-600 decoration-2" href="https://hackatime.hackclub.com/">Hackatime</a></li>
+					<li>Make a <a class="text-red-600 no-underline hover:underline hover:decoration-dashed decoration-red-600 decoration-2" href="https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories">GitHub repository</a></li>
 					<li>Work on your project</li>
-					<li>Ship your project and submit it to <a class="text-red-500 no-underline hover:underline hover:decoration-dashed decoration-red-500 decoration-2" href="https://forms.hackclub.com/t/aPiaPUeF2Dus">this form</a></li>
+					<li>Ship your project and submit it to <a class="text-red-600 no-underline hover:underline hover:decoration-dashed decoration-red-600 decoration-2" href="https://forms.hackclub.com/t/aPiaPUeF2Dus">this form</a></li>
 
 				</ol>
+				<p class="italic">(Shipping means that other people can see your website/play your game online!)</p>
 			</div>
-			<p class="font-[Belanosima] text-4xl text-red-500">Invite friends!</p>
+
+			<p class="font-[Belanosima] text-4xl text-red-600">2 hours</p>
 			<div class="pb-4 font-[Belanosima] text-xl">
-				<p class="py-4">yeah</p>
+				<p class="py-4">If you code for 2 hours, we'll ship you instant ramen noodles.</p>
 			</div>
+
+			<p class="font-[Belanosima] text-4xl text-red-600">5+ hours with friends</p>
+			<div class="pb-4 font-[Belanosima] text-xl">
+				<p class="py-4">If you and a friend each spend 5 hours on your projects, we'll give each of you a $25 HCB grant to eat at a restaurant together. Just include your friend's Slack ID when submitting!</p>
+			</div>
+			
 		</div>
 		
 		<img id="bowl" src={ramenbowl} alt="Tonkotsu ramen" class="h-100 w-auto rotate-75" />
 	</div>
 
-	<div id="resources">
+	<div
+		id="resources"
+		class="hidden flex min-h-screen w-screen flex-col items-center justify-center gap-20 bg-[#c95348] sm:px-4 md:flex-row"
+	>
 		
 	</div>
 
 	<!-- footer area -->
 	<div
 		id="footer"
-		class="inset-0 mt-8 flex h-auto min-h-[30vh] w-screen flex-col items-center justify-center bg-[#692616] bg-cover bg-center py-8 font-[Belanosima]"
+		class="inset-0 flex h-auto min-h-[30vh] w-screen flex-col items-center justify-center bg-[#692616] bg-cover bg-center py-8 font-[Belanosima]"
 	>
 		<div class="flex flex-col items-center justify-center gap-3">
 			<p class="text-lg text-[#FBE4AB]">Made with luv!</p>
-			<p class="text-lg text-red-500">by Hack Club</p>
+			<p class="text-lg text-red-600">by Hack Club</p>
 		</div>
 	</div>
 </div>
