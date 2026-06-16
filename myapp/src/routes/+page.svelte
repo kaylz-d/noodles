@@ -103,10 +103,16 @@
 		/>
 		<div class="flex flex-col items-center justify-center gap-3 lg:flex-row z-10 -mt-10 md:mt-0">
 			<p class="text-lg text-red-600">make a scroll-based website or game</p>
-			<button
+			<!-- <button
 				class="rounded-full border-2 border-red-600 px-4 py-2 text-lg text-red-600 hover:bg-red-600 hover:text-white"
-				>• SUBMIT HERE •</button
+				><a href="https://forms.hackclub.com/t/aPiaPUeF2Dus">• SUBMIT HERE •</a></button
+			> -->
+			<a
+				href="https://forms.hackclub.com/t/aPiaPUeF2Dus"
+				class="rounded-full border-2 border-red-600 px-4 py-2 text-lg text-red-600 hover:bg-red-600 hover:text-white"
 			>
+			• SUBMIT HERE •
+			</a>
 			<p class="text-lg text-red-600">we'll ship you + your friends noodles!!</p>
 		</div>
 
