@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Noodles - Hack Club</title>
+</svelte:head>
+
 <!-- <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 <p class="text-5xl font-bold text-blue-600">Just a test to see how this works! :D</p> -->
@@ -154,7 +158,7 @@
 
 			<p class="font-[Belanosima] text-4xl text-red-600">5+ hours with friends</p>
 			<div class="font-[Belanosima] text-xl">
-				<p class="py-4">If you and a friend each spend 5 hours on your projects, we'll give each of you a $25 HCB grant to eat at a restaurant together. Just include your friend's Slack ID when submitting!</p>
+				<p class="py-4">If you and a friend each spend 5 hours on your projects, we'll give each of you a $25 HCB grant to eat at a restaurant together. Just include your friend's Slack ID <a class="text-red-600 no-underline hover:underline hover:decoration-dashed decoration-red-600 decoration-2" href="https://hackclub.enterprise.slack.com/archives/C0159TSJVH8">(#what-is-my-slack-id)</a> when submitting!</p>
 			</div>
 
 			<p class="font-[Belanosima] text-4xl text-red-600 py-4">ENDS JUNE 18</p>
@@ -177,8 +181,8 @@
 		class="inset-0 flex h-auto min-h-[30vh] w-screen flex-col items-center justify-center bg-[#692616] bg-cover bg-center py-8 font-[Belanosima]"
 	>
 		<div class="flex flex-col items-center justify-center gap-3">
-			<p class="text-lg text-[#FBE4AB]">Made with luv!</p>
-			<p class="text-lg text-red-600">by Hack Club</p>
+			<p class="text-lg text-red-600">Made with luv by Hack Club!</p>
+		<p class="text-lg text-[#FBE4AB]">Questions? Send to <a href="https://hackclub.enterprise.slack.com/archives/C0BAUMWHAA0">#noodles</a> or kaylee@hackclub.com</p>
 		</div>
 	</div>
 </div>
