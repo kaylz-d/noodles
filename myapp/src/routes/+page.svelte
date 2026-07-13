@@ -1,7 +1,3 @@
-<svelte:head>
-  <title>Noodles - Hack Club</title>
-</svelte:head>
-
 <!-- <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 <p class="text-5xl font-bold text-blue-600">Just a test to see how this works! :D</p> -->
@@ -72,15 +68,17 @@
 		
 		});
 	
-		// LEARN ANIMATIONS
-		// (ScrollTrigger.create({
-		// 	trigger: ''
-		// })
+		// RULES ANIMATIONS
+		
 
 </script>
 
+<svelte:head>
+	<title>Noodles - Hack Club</title>
+</svelte:head>
+
 <!-- using just screen makes the site janky idk -->
-<div class="min-h-screen w-full overflow-hidden bg-[#FFCC90] text-center">
+<div class="min-h-screen w-full relative overflow-hidden bg-[#FFCC90] text-center">
 	<!-- #FFCC90 is a good color -->
 	<div
 		style="background-image: url({wallpaper})"
@@ -92,6 +90,7 @@
 			<!-- <p class="italic">Scroll:</p> -->
 			<p id="hello-text">HELLO</p>
 			<p id="what-text" class="text-orange-400">WHAT?</p>
+			<p id="rules-text" class="text-orange-400">RULES</p>
 			<!-- <p id="resources-text" class="text-orange-400">RESOURCES</p> -->
 			<!-- <p id="bye-text" class="text-orange-400">BYE</p> -->
 		</div>
@@ -103,9 +102,9 @@
 		<img
 			src={title}
 			alt="Ramen Hack title"
-			class="scroll-title my-4 block max-h-[30vh] w-auto md:hidden -mt-20 md:mt-0"
+			class="scroll-title my-4 -mt-20 block max-h-[30vh] w-auto md:mt-0 md:hidden"
 		/>
-		<div class="flex flex-col items-center justify-center gap-3 lg:flex-row z-10 -mt-10 md:mt-0">
+		<div class="z-10 -mt-10 flex flex-col items-center justify-center gap-3 md:mt-0 lg:flex-row">
 			<p class="text-lg text-red-600">make a scroll-based website or game</p>
 			<!-- <button
 				class="rounded-full border-2 border-red-600 px-4 py-2 text-lg text-red-600 hover:bg-red-600 hover:text-white"
@@ -115,7 +114,7 @@
 				href="https://forms.hackclub.com/t/aPiaPUeF2Dus"
 				class="rounded-full border-2 border-red-600 px-4 py-2 text-lg text-red-600 hover:bg-red-600 hover:text-white"
 			>
-			• SUBMIT HERE •
+				• SUBMIT HERE •
 			</a>
 			<p class="text-lg text-red-600">we'll ship you + your friends noodles!!</p>
 		</div>
@@ -133,47 +132,77 @@
 		/></a
 	>
 
+	<p class="text-lg text-red-600 absolute top-12 right-12 font-[Belanosima]">YSWS ENDED! Made by <a class="hover:underline hover:decoration-wavy" href="https://hackclub.enterprise.slack.com/team/U08QMC72ZST">@Kaylee :D</a></p>
+
 	<!-- <img src={ramenbowl} alt="Picture of ramen bowl" class="hidden lg:block fixed -left-80 -bottom-110 scale-75 rotate-75"> -->
 	<div
 		id="what"
-		class="pb-8 flex min-h-screen w-screen flex-col items-center justify-center gap-20 bg-[#FFCC90] sm:px-4 md:flex-row"
+		class="flex min-h-screen w-screen flex-col items-center justify-center gap-20 bg-[#FFCC90] pb-16 sm:px-4 md:flex-row"
 	>
-		<div class="flex flex-col items-center justify-center bg-[#FBE4AB] h-auto w-3/4 md:w-1/2 px-12 lg:px-20 py-4 rounded-lg">
-			<p class="pt-8 font-[Belanosima] text-4xl text-red-600">How does this work?</p>
+		<div
+			class="flex h-auto w-3/4 flex-col items-center justify-center rounded-lg bg-[#FBE4AB] px-6 md:px-12 py-4 md:w-1/2 lg:px-20"
+		>
+			
+			<p class="mt-8 font-[Belanosima] text-lg bg-red-600 text-white p-1">This YSWS ended on June 18, 2026.</p>
+			<p class="pt-4 font-[Belanosima] text-4xl text-red-600">How does this work?</p>
 			<div class="pb-4 font-[Belanosima] text-xl">
-				<ol class="py-4 list-decimal list-inside">
-					<li>Connect to <a class="text-red-600 no-underline hover:underline hover:decoration-dashed decoration-red-600 decoration-2" href="https://hackatime.hackclub.com/">Hackatime</a></li>
-					<li>Make a <a class="text-red-600 no-underline hover:underline hover:decoration-dashed decoration-red-600 decoration-2" href="https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories">GitHub repository</a></li>
+				<ol class="list-inside list-decimal py-4">
+					<li>
+						Connect to <a
+							class="text-red-600 no-underline decoration-red-600 decoration-2 hover:underline hover:decoration-wavy"
+							href="https://hackatime.hackclub.com/">Hackatime</a
+						>
+					</li>
+					<li>
+						Make a <a
+							class="text-red-600 no-underline decoration-red-600 decoration-2 hover:underline hover:decoration-wavy"
+							href="https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories"
+							>GitHub repository</a
+						>
+					</li>
 					<li>Work on your project</li>
-					<li>Ship your project and submit it to <a class="text-red-600 no-underline hover:underline hover:decoration-dashed decoration-red-600 decoration-2" href="https://forms.hackclub.com/t/aPiaPUeF2Dus">this form</a></li>
-
+					<li>
+						Ship your project and submit it to <a
+							class="text-red-600 no-underline decoration-red-600 decoration-2 hover:underline hover:decoration-wavy"
+							href="https://forms.hackclub.com/t/aPiaPUeF2Dus">this form</a
+						>
+					</li>
 				</ol>
-				<p class="italic">(Shipping means that other people can see your website/play your game online!)</p>
+				<p class="italic">
+					(Shipping means that other people can see your website/play your game online!)
+				</p>
 			</div>
 
-			<p class="font-[Belanosima] text-4xl text-red-600 pt-4">2 hours</p>
+			<p class="pt-4 font-[Belanosima] text-4xl text-red-600">2 hours</p>
 			<div class="pb-4 font-[Belanosima] text-xl">
 				<p class="py-4">If you code for 2 hours, we'll ship you instant ramen noodles.</p>
 			</div>
 
 			<p class="font-[Belanosima] text-4xl text-red-600">5+ hours with friends</p>
 			<div class="font-[Belanosima] text-xl">
-				<p class="py-4">If you and a friend each spend 5 hours on your projects, we'll give each of you a $25 HCB grant to eat at a restaurant together. Just include your friend's Slack ID <a class="text-red-600 no-underline hover:underline hover:decoration-dashed decoration-red-600 decoration-2" href="https://hackclub.enterprise.slack.com/archives/C0159TSJVH8">(#what-is-my-slack-id)</a> when submitting!</p>
+				<p class="pt-4 pb-8">
+					If you and a friend each spend 5 hours on your projects, we'll give each of you a $25 HCB
+					grant to eat at a restaurant together. Just include your friend's Slack ID <a
+						class="text-red-600 no-underline decoration-red-600 decoration-2 hover:underline hover:decoration-wavy"
+						href="https://hackclub.enterprise.slack.com/archives/C0159TSJVH8"
+						>(#what-is-my-slack-id)</a
+					> when submitting!
+				</p>
 			</div>
 
-			<p class="font-[Belanosima] text-4xl text-red-600 py-4">ENDS JUNE 18</p>
-			
+			<!-- <p class="py-4 font-[Belanosima] text-4xl text-red-600">EMDS JUNE 18</p> -->
 		</div>
-		
+
 		<img id="bowl" src={ramenbowl} alt="Tonkotsu ramen" class="h-100 w-auto rotate-75" />
 	</div>
 
-	<div
-		id="resources"
-		class="hidden flex min-h-screen w-screen flex-col items-center justify-center gap-20 bg-[#c95348] sm:px-4 md:flex-row"
+	<!-- <div
+		id="rules"
+		class="flex w-screen flex-col items-center justify-center gap-20 bg-[#c95348] p-8 sm:px-4 md:flex-row"
 	>
-		
-	</div>
+		<p class="font-[Belanosima] text-4xl text-[#FBE4AB]">GUIDELINES</p>
+
+	</div> -->
 
 	<!-- footer area -->
 	<div
@@ -181,8 +210,12 @@
 		class="inset-0 flex h-auto min-h-[30vh] w-screen flex-col items-center justify-center bg-[#692616] bg-cover bg-center py-8 font-[Belanosima]"
 	>
 		<div class="flex flex-col items-center justify-center gap-3">
-			<p class="text-lg text-red-600">Made with luv by Hack Club!</p>
-		<p class="text-lg text-[#FBE4AB]">Questions? Send to <a href="https://hackclub.enterprise.slack.com/archives/C0BAUMWHAA0">#noodles</a> or kaylee@hackclub.com</p>
+			<p class="text-lg text-red-600">Made with luv by Hack Club! <a class="hover:underline hover:decoration-wavy" href="https://forms.hackclub.com/bounty">BOUNTY</a> 🍥 <a class="hover:underline hover:decoration-wavy" href="https://hackclub.com/privacy-and-terms">PRIVACY & TERMS</a></p>
+			<p class="text-lg text-[#FBE4AB]">
+				Questions? Send to <a class="hover:underline hover:decoration-wavy" href="https://hackclub.enterprise.slack.com/archives/C0BAUMWHAA0"
+					>#noodles</a
+				> or kaylee@hackclub.com
+			</p>
 		</div>
 	</div>
 </div>
